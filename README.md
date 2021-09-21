@@ -5,3 +5,9 @@
 [SwiftUI TUTORIALS](https://developer.apple.com/tutorials/swiftui)
 
 [Creating and Combining Views](https://github.com/elenaseo05/Swift_Study/tree/main/Landmarks)
+
+
+[명언 생성기](https://github.com/elenaseo05/Swift_Study/tree/main/Phrase)
+    - 명언생성기 앱 만들기 
+    - 
+
