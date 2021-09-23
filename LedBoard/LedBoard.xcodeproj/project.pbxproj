@@ -14,6 +14,7 @@
 		A6F8633A26FB08FE00657B7A /* LedBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F8633826FB08FE00657B7A /* LedBoard.xcdatamodeld */; };
 		A6F8633C26FB090300657B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F8633B26FB090300657B7A /* Assets.xcassets */; };
 		A6F8633F26FB090300657B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F8633D26FB090300657B7A /* LaunchScreen.storyboard */; };
+		A6F8636326FCA55900657B7A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F8636226FCA55900657B7A /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		A6F8634026FB090300657B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F8634526FB090300657B7A /* LedBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LedBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F8635026FB090300657B7A /* LedBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LedBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F8636226FCA55900657B7A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				A6F8633126FB08FE00657B7A /* SceneDelegate.swift */,
 				A6F8633326FB08FE00657B7A /* ViewController.swift */,
 				A6F8633526FB08FE00657B7A /* Main.storyboard */,
+				A6F8636226FCA55900657B7A /* SettingViewController.swift */,
 				A6F8633B26FB090300657B7A /* Assets.xcassets */,
 				A6F8633D26FB090300657B7A /* LaunchScreen.storyboard */,
 				A6F8634026FB090300657B7A /* Info.plist */,
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F8636326FCA55900657B7A /* SettingViewController.swift in Sources */,
 				A6F8633426FB08FE00657B7A /* ViewController.swift in Sources */,
 				A6F8633026FB08FE00657B7A /* AppDelegate.swift in Sources */,
 				A6F8633A26FB08FE00657B7A /* LedBoard.xcdatamodeld in Sources */,
