@@ -53,6 +53,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentsLabel" destination="BJy-sv-SDb" id="nk1-RG-lf4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,7 +64,7 @@
         <!--설정-->
         <scene sceneID="e3M-on-RrZ">
             <objects>
-                <viewController id="00S-XP-1KJ" sceneMemberID="viewController">
+                <viewController id="00S-XP-1KJ" customClass="SettingViewController" customModule="LedBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XOt-p1-adg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,14 +104,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8e-Ir-2NM">
                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="32"/>
                                                 <state key="normal" title="노란색" image="yellow_circle"/>
+                                                <connections>
+                                                    <action selector="tabTextColorBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="cR5-tr-7gY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-ge-uCO">
                                                 <rect key="frame" x="113" y="0.0" width="79" height="32"/>
                                                 <state key="normal" title="저주색" image="purple_circle"/>
+                                                <connections>
+                                                    <action selector="tabTextColorBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="MHV-wU-hPD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sS1-na-SYO">
                                                 <rect key="frame" x="226" y="0.0" width="79" height="32"/>
                                                 <state key="normal" title="초록색" image="green_circle"/>
+                                                <connections>
+                                                    <action selector="tabTextColorBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="l77-45-Hms"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -117,12 +129,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-79-LoG">
                                 <rect key="frame" x="192" y="410.5" width="30" height="30"/>
                                 <state key="normal" title="저장"/>
+                                <connections>
+                                    <action selector="tabSaveBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="uze-9a-clB"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="323-wP-9U0">
                                 <rect key="frame" x="24" y="319" width="366" height="67.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트 색상 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-GT-Zs4">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배경 색상 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-GT-Zs4">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -133,14 +148,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-c5-ESY">
                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="32"/>
                                                 <state key="normal" title="검정색" image="black_circle"/>
+                                                <connections>
+                                                    <action selector="tabBackgroundColorBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="iZB-6i-9xt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D81-5S-r0e">
                                                 <rect key="frame" x="113" y="0.0" width="79" height="32"/>
                                                 <state key="normal" title="하늘색" image="blue_circle"/>
+                                                <connections>
+                                                    <action selector="tabBackgroundColorBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="idK-9W-JAl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrY-bj-KBV">
                                                 <rect key="frame" x="226" y="0.0" width="79" height="32"/>
                                                 <state key="normal" title="주황색" image="orange_cricle"/>
+                                                <connections>
+                                                    <action selector="tabBackgroundColorBtn:" destination="00S-XP-1KJ" eventType="touchUpInside" id="u9X-Ju-cvR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -164,6 +188,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="il1-Ha-QVh"/>
+                    <connections>
+                        <outlet property="blackBtn" destination="KN4-c5-ESY" id="3Wk-Vm-07s"/>
+                        <outlet property="buleBtn" destination="D81-5S-r0e" id="RaS-Zh-kBZ"/>
+                        <outlet property="greenBtn" destination="sS1-na-SYO" id="GeP-sE-zcb"/>
+                        <outlet property="orangeBtn" destination="BrY-bj-KBV" id="2lH-1l-CzX"/>
+                        <outlet property="purpleBtn" destination="eyd-ge-uCO" id="wbh-ZQ-myc"/>
+                        <outlet property="textField" destination="fyj-2s-uHH" id="8iq-3A-Wjg"/>
+                        <outlet property="yellowBtn" destination="F8e-Ir-2NM" id="SOe-Yr-ZzE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wm3-cF-y1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
