@@ -190,7 +190,7 @@
                     <navigationItem key="navigationItem" title="설정" id="il1-Ha-QVh"/>
                     <connections>
                         <outlet property="blackBtn" destination="KN4-c5-ESY" id="3Wk-Vm-07s"/>
-                        <outlet property="buleBtn" destination="D81-5S-r0e" id="RaS-Zh-kBZ"/>
+                        <outlet property="blueBtn" destination="D81-5S-r0e" id="RJ9-Zf-8r7"/>
                         <outlet property="greenBtn" destination="sS1-na-SYO" id="GeP-sE-zcb"/>
                         <outlet property="orangeBtn" destination="BrY-bj-KBV" id="2lH-1l-CzX"/>
                         <outlet property="purpleBtn" destination="eyd-ge-uCO" id="wbh-ZQ-myc"/>
