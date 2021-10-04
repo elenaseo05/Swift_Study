@@ -7,11 +7,6 @@
 
 **Swift 공식 document로 배우기**
 
----------------
-배우는 과정에서 필요한 내용만 빠르게 번역하였습니다.   
-정확하지 않을 수 있으며, 일부 내용이 누락되었을 수 있습니다.   
-(의역인듯 의역아닌 오역 + 직역입니다. 필요하다면 그저 참고용으로만 사용하세요.)
-
 -------------- 
 Section 1
 Create a New Project and Explore the Canvas
@@ -43,6 +38,8 @@ Beyond the title view you created in the previous section, you’ll add text vie
 When creating a SwiftUI view, you describe its content, layout, and behavior in the view’s body property; however, the body property only returns a single view. You can combine and embed multiple views in stacks, which group views together horizontally, vertically, or back-to-front.
 In this section, you’ll use a vertical stack to place the title above a horizontal stack that contains details about the park.
 
+Section 3 
+views 합치기
 
 
 --------------
