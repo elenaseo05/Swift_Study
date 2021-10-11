@@ -14,6 +14,7 @@
 		A6F8637B2701F5C800657B7A /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F863792701F5C800657B7A /* Calculator.xcdatamodeld */; };
 		A6F8637D2701F5CA00657B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F8637C2701F5CA00657B7A /* Assets.xcassets */; };
 		A6F863802701F5CA00657B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F8637E2701F5CA00657B7A /* LaunchScreen.storyboard */; };
+		A6F8638A27144F6C00657B7A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F8638927144F6C00657B7A /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A6F8637C2701F5CA00657B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F8637F2701F5CA00657B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6F863812701F5CA00657B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6F8638927144F6C00657B7A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A6F863742701F5C800657B7A /* ViewController.swift */,
 				A6F863762701F5C800657B7A /* Main.storyboard */,
 				A6F8637C2701F5CA00657B7A /* Assets.xcassets */,
+				A6F8638927144F6C00657B7A /* RoundButton.swift */,
 				A6F8637E2701F5CA00657B7A /* LaunchScreen.storyboard */,
 				A6F863812701F5CA00657B7A /* Info.plist */,
 				A6F863792701F5C800657B7A /* Calculator.xcdatamodeld */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F863752701F5C800657B7A /* ViewController.swift in Sources */,
+				A6F8638A27144F6C00657B7A /* RoundButton.swift in Sources */,
 				A6F8637B2701F5C800657B7A /* Calculator.xcdatamodeld in Sources */,
 				A6F863712701F5C800657B7A /* AppDelegate.swift in Sources */,
 				A6F863732701F5C800657B7A /* SceneDelegate.swift in Sources */,
