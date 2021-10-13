@@ -7,8 +7,23 @@
 
 import UIKit
 
+enum Operation {
+    case Add
+    case Sub
+    case Div
+    case Mul
+    case unknown
+}
+
+
 class ViewController: UIViewController {
     @IBOutlet weak var numberOutputLabel: UILabel!
+    
+    var displayNum = ""
+    var firstOperand = ""
+    var secondOperand = ""
+    var result = ""
+    var currentOperation: Operation = .unknown
     
     override func viewDidLoad() {
         super.viewDidLoad()
