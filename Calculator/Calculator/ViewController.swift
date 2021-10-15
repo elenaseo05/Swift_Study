@@ -31,6 +31,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tabNumberButton(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        if self.displayNum.count < 9 { // 화면에 숫자가 9개 이상 표기 되지 않도록 한다.
+            self.displayNum += numberValue
+            self.numberOutputLabel.text = self.displayNum
+        }
     }
     
     @IBAction func tabClearButton(_ sender: UIButton) {
