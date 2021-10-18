@@ -39,9 +39,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tabClearButton(_ sender: UIButton) {
+        displayNum = ""
+        firstOperand = ""
+        secondOperand = ""
+        result = ""
+        currentOperation = .unknown
+        numberOutputLabel.text = "0"
     }
     
     @IBAction func tabDotButton(_ sender: UIButton) {
+        if self.displayNum.count < 8, !self.displayNum.contains(".") {
+//                         길이확인 함수                  포함여부를 확인함수
+            
+            self.displayNum += self.displayNum.isEmpty ? "0." : "."
+            self.numberOutputLabel.text = displayNum
+        }
     }
     
     @IBAction func tabDivideButton(_ sender: UIButton) {
