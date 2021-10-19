@@ -52,23 +52,65 @@ class ViewController: UIViewController {
 //                         길이확인 함수                  포함여부를 확인함수
             
             self.displayNum += self.displayNum.isEmpty ? "0." : "."
-            self.numberOutputLabel.text = displayNum
+            self.numberOutputLabel.text = self.displayNum
         }
     }
     
     @IBAction func tabDivideButton(_ sender: UIButton) {
+        self.operation(.Div) // 나누기
     }
     
     @IBAction func tabMultiplyButton(_ sender: UIButton) {
+        self.operation(.Mul) // 곱하기
     }
     
     @IBAction func tabSubtractButton(_ sender: UIButton) {
+        self.operation(.Sub)
     }
     
     @IBAction func tabAddButton(_ sender: UIButton) {
+        self.operation(.Add)
     }
     
     @IBAction func tabEqualButton(_ sender: UIButton) {
+        self.operation(self.currentOperation)
+    }
+    
+    func operation(_ operation : Operation) {
+        if self.currentOperation != .unknown {
+            if !self.displayNum.isEmpty {
+                self.secondOperand = self.displayNum
+                self.displayNum = ""
+                
+                guard let firstOperand = Double(self.firstOperand) else { return }
+                guard let secondOperand = Double(self.secondOperand) else { return }
+                
+                switch self.currentOperation {
+                    case .Add: // 더하기
+                        self.result = "\(firstOperand + secondOperand)"
+                    case .Sub: // 빼기
+                        self.result = "\(firstOperand - secondOperand)"
+                    case .Div: // 나누기
+                        self.result = "\(firstOperand / secondOperand)"
+                    case .Mul: // 곱하기
+                        self.result = "\(firstOperand * secondOperand)"
+                    default:
+                        break
+                }
+                if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
+                    self.result = "\(Int(result))"
+                }
+                self.firstOperand = self.result
+                self.numberOutputLabel.text = self.result
+                
+            }
+            
+            self.currentOperation = operation
+        } else {
+            self.firstOperand = self.displayNum
+            self.currentOperation = operation
+            self.displayNum = ""
+        }
     }
     
 }
