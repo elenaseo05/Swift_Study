@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		A6C10AE1271F952A001FB915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10AE0271F952A001FB915 /* AppDelegate.swift */; };
 		A6C10AE3271F952A001FB915 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10AE2271F952A001FB915 /* SceneDelegate.swift */; };
-		A6C10AE5271F952A001FB915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10AE4271F952A001FB915 /* ViewController.swift */; };
 		A6C10AE8271F952A001FB915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C10AE6271F952A001FB915 /* Main.storyboard */; };
 		A6C10AEB271F952A001FB915 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6C10AE9271F952A001FB915 /* TodoList.xcdatamodeld */; };
 		A6C10AED271F952B001FB915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C10AEC271F952B001FB915 /* Assets.xcassets */; };
 		A6C10AF0271F952B001FB915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C10AEE271F952B001FB915 /* LaunchScreen.storyboard */; };
 		A6C10AF8271FA309001FB915 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10AF7271FA309001FB915 /* Task.swift */; };
+		A6CBE5A82721245000F399F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C10AE4271F952A001FB915 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C10AE5271F952A001FB915 /* ViewController.swift in Sources */,
+				A6CBE5A82721245000F399F0 /* ViewController.swift in Sources */,
 				A6C10AE1271F952A001FB915 /* AppDelegate.swift in Sources */,
 				A6C10AF8271FA309001FB915 /* Task.swift in Sources */,
 				A6C10AE3271F952A001FB915 /* SceneDelegate.swift in Sources */,
