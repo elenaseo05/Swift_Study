@@ -10,11 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var tasks = [Task]()
+    var tasks = [Task]() {
+        didSet{
+            self.saveTasks()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.loadTasks()
     }
   
     @IBAction func tabEditBtn(_ sender: UIBarButtonItem) {
@@ -40,8 +45,30 @@ class ViewController: UIViewController {
             textField.placeholder = "what are you going to do today"
         })
         self.present(alert, animated: true, completion: nil)
-    
     }
+    
+    func saveTasks() {
+        let data = self.tasks.map {
+            [
+                "title" : $0.title,
+                "done" : $0.done
+            ]
+        }
+        // UserDefaults - 사용자 기본 설정과 같은 단일 데이터에 적합 (데이터, 키)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(data, forKey: "tasks")
+    }
+    
+    func loadTasks() {
+        let userDefault = UserDefaults.standard
+        guard let data = userDefault.object(forKey: "tasks") as? [[String: Any]] else { return }
+        self.tasks = data.compactMap {
+            guard let title = $0["title"] as? String else { return nil }
+            guard let done = $0["done"] as? Bool else { return nil }
+            return Task(title: title, done: done)
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
