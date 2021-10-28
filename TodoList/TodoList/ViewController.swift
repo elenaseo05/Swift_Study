@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var editButton: UIBarButtonItem!
+    var doneBtn: UIBarButtonItem?
     var tasks = [Task]() {
         didSet{
             self.saveTasks()
@@ -18,12 +20,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneBtntap))
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.loadTasks()
     }
+    
+    @objc func doneBtntap() {
+        self.navigationItem.leftBarButtonItem = self.editButton
+        self.tableView.setEditing(false, animated: true)
+    }
   
     @IBAction func tabEditBtn(_ sender: UIBarButtonItem) {
+        
+        guard !self.tasks.isEmpty else {return}
+        self.navigationItem.leftBarButtonItem = self.doneBtn
+        self.tableView.setEditing(true, animated: true)
     }
     
     
@@ -90,6 +102,29 @@ extension ViewController: UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.tasks.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        if self.tasks.isEmpty {
+            self.doneBtntap()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        var tasks = self.tasks
+        let task = tasks[sourceIndexPath.row]
+        tasks.remove(at: sourceIndexPath.row)
+        tasks.insert(task, at: destinationIndexPath.row)
+        self.tasks = tasks
+    }
+    
+    
 }
 
 
