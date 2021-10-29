@@ -3,17 +3,20 @@
 //  TodoList
 //
 //  Created by Elena on 2021/10/20.
+//  최초 작성 2021/10/20
+//  추가 기능 구현 2021/10/28
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet var editButton: UIBarButtonItem!
-    var doneBtn: UIBarButtonItem?
+    @IBOutlet weak var tableView: UITableView! // 테이블
+    @IBOutlet var editButton: UIBarButtonItem! // 좌측상단 edit 버튼
+    
+    var doneBtn: UIBarButtonItem? // done 버튼 동적 생성
     var tasks = [Task]() {
-        didSet{
+        didSet{ //
             self.saveTasks()
         }
     }
@@ -80,6 +83,7 @@ class ViewController: UIViewController {
             guard let done = $0["done"] as? Bool else { return nil }
             return Task(title: title, done: done)
         }
+        
     }
     
 }
