@@ -15,8 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet var editButton: UIBarButtonItem! // 좌측상단 edit 버튼
     
     var doneBtn: UIBarButtonItem? // done 버튼 동적 생성
+    
     var tasks = [Task]() {
-        didSet{ //
+        didSet{
+//            didSet, willSet은 Model에서의 변경된 사항을 View에 '반영'하고자 할때 사용됨
+//            didSet(oldValue)에는 이전 값이, willSet(newValue)에는 새로운 값을 받아 올 수 있다.
             self.saveTasks()
         }
     }
@@ -42,25 +45,28 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func tabAddBtn(_ sender: UIBarButtonItem) {
+    @IBAction func tabAddBtn(_ sender: UIBarButtonItem) { // add 버튼 클릭시
     // Add(+) 버튼 클릭시
         let alert = UIAlertController(title: "ADD Todo", message: nil, preferredStyle: .alert) // alert 창 띄우기
         
+        // alert ADD버튼 액션
         let registerBtn = UIAlertAction(title: "ADD", style: .default, handler: { [weak self] _ in
             guard let title = alert.textFields?[0].text else { return }
             let task = Task(title: title, done: false)
-            self?.tasks.append(task)
+            self?.tasks.append(task) // tasks에 추가
             self?.tableView.reloadData()
         })
         
+        // alert CANCLE 버튼 액션
         let cancleBtn = UIAlertAction(title: "Cancle", style: .cancel, handler: nil)
         
+        // alert 액션 추가
         alert.addAction(registerBtn)
         alert.addAction(cancleBtn)
         alert.addTextField(configurationHandler: { textField in
-            textField.placeholder = "what are you going to do today"
+            textField.placeholder = "what is today todo LIST"
         })
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil) // 화면 전환
     }
     
     func saveTasks() {
@@ -88,9 +94,11 @@ class ViewController: UIViewController {
     
 }
 
+
+// 테이블 데이터
 extension ViewController: UITableViewDataSource {
-    // extension : 기존에 존재하는 구조체, 클래스, 열거형에 새로운 기능 추가, 확장 가능
-    // 오버라이딩 불가
+    // extension : 기존에 존재하는 구조체, 클래스, 열거형에 새로운 기능 추가, 확장 가능, 오버라이딩 불가
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tasks.count
     }
