@@ -18,6 +18,7 @@
 		A6FBBB71273A08820062695B /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBBB70273A08820062695B /* StarViewController.swift */; };
 		A6FBBB73273A09BE0062695B /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBBB72273A09BE0062695B /* StarCell.swift */; };
 		A6FBBB75273A10BC0062695B /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBBB74273A10BC0062695B /* WriteDiaryViewController.swift */; };
+		A6FBBBBD2744E29C0062695B /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FBBBBC2744E29C0062695B /* DiaryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A6FBBB70273A08820062695B /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		A6FBBB72273A09BE0062695B /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
 		A6FBBB74273A10BC0062695B /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		A6FBBBBC2744E29C0062695B /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				A6A49926272BA0C700988242 /* SceneDelegate.swift */,
 				A6A49928272BA0C700988242 /* ViewController.swift */,
 				A6A4992A272BA0C700988242 /* Main.storyboard */,
+				A6FBBBBC2744E29C0062695B /* DiaryDetailViewController.swift */,
 				A6FBBB74273A10BC0062695B /* WriteDiaryViewController.swift */,
 				A6FBBB72273A09BE0062695B /* StarCell.swift */,
 				A6FBBB70273A08820062695B /* StarViewController.swift */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A49929272BA0C700988242 /* ViewController.swift in Sources */,
+				A6FBBBBD2744E29C0062695B /* DiaryDetailViewController.swift in Sources */,
 				A6A49925272BA0C700988242 /* AppDelegate.swift in Sources */,
 				A6A49927272BA0C700988242 /* SceneDelegate.swift in Sources */,
 				A6FBBB6F273A082B0062695B /* DiaryCell.swift in Sources */,
