@@ -12,7 +12,6 @@ class WriteDiaryViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contantsTextView: UITextView!
     @IBOutlet weak var dateTextFieid: UITextField!
-    
     @IBOutlet weak var confirmButton: UIBarButtonItem!
     
     private let datepicker = UIDatePicker()
@@ -22,7 +21,7 @@ class WriteDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureContentsTextView()
-        
+        self.configureDatePicker()
     }
     
     
@@ -41,8 +40,20 @@ class WriteDiaryViewController: UIViewController {
     private func configureDatePicker() {
         self.datepicker.datePickerMode = .date
         self.datepicker.preferredDatePickerStyle = .wheels
+        self.datepicker.addTarget(self, action: #selector(datePickerValueDidChange(_:)), for: .valueChanged)
+        self.dateTextFieid.inputView = self.datepicker
     }
     
+    @IBAction func tabConfirmButton(_ sender: UIBarButtonItem) {
+        
+    }
     
-
+    @objc private func datePickerValueDidChange(_ datePicker: UIDatePicker) {
+        let formater = DateFormatter()
+        formater.dateFormat = "yyyy년 MM월 dd일(EEEEE)" // 데이트 포맷 EEEEE는 요일을 한 글자로 표시하기 위함
+        formater.locale = Locale(identifier: "ko_KR")
+        self.diaryDate = datePicker.date
+        self.dateTextFieid.text = formater.string(from: datePicker.date)
+    }
+    
 }

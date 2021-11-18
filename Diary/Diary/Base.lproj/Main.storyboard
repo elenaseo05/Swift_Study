@@ -196,7 +196,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기작성" id="2Pc-iD-Amr">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="gvc-Im-H6l"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="gvc-Im-H6l">
+                            <connections>
+                                <action selector="tabConfirmButton:" destination="oSN-nU-EkO" id="HsW-3f-dqJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="confirmButton" destination="gvc-Im-H6l" id="Jpg-J1-axq"/>
