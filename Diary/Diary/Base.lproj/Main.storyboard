@@ -93,6 +93,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="hZo-7h-U7c" id="pV6-FP-MuM"/>
+                                            <outlet property="titleLabel" destination="J4E-BN-f4g" id="S7h-tx-9Vf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -113,6 +117,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="PGI-l4-Lsm" id="hMu-jn-TLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,6 +198,12 @@
                     <navigationItem key="navigationItem" title="일기작성" id="2Pc-iD-Amr">
                         <barButtonItem key="rightBarButtonItem" title="등록" id="gvc-Im-H6l"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="gvc-Im-H6l" id="Jpg-J1-axq"/>
+                        <outlet property="contantsTextView" destination="PgL-Cf-BZH" id="pb8-UW-API"/>
+                        <outlet property="dateTextFieid" destination="bvu-RE-Nan" id="1Ae-7p-mMl"/>
+                        <outlet property="titleTextField" destination="QH6-NW-aMy" id="mW9-rb-g0d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg8-Mf-GSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
