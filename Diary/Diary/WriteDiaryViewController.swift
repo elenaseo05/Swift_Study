@@ -37,11 +37,12 @@ class WriteDiaryViewController: UIViewController {
         self.contantsTextView.layer.cornerRadius = 5.0 // 둥굴게
     }
     
-    private func configureDatePicker() {
+    private func configureDatePicker() { // 입력방식 datePicker로 변경
         self.datepicker.datePickerMode = .date
         self.datepicker.preferredDatePickerStyle = .wheels
         self.datepicker.addTarget(self, action: #selector(datePickerValueDidChange(_:)), for: .valueChanged)
-        self.dateTextFieid.inputView = self.datepicker
+        self.datepicker.locale = Locale(identifier: "ko-KR")
+        self.dateTextFieid.inputView = self.datepicker // textField의 입력뷰(inputView) datePicker로 설정
     }
     
     @IBAction func tabConfirmButton(_ sender: UIBarButtonItem) {
@@ -54,6 +55,10 @@ class WriteDiaryViewController: UIViewController {
         formater.locale = Locale(identifier: "ko_KR")
         self.diaryDate = datePicker.date
         self.dateTextFieid.text = formater.string(from: datePicker.date)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { // 화면을 터치하면 호출 되는 메서드 
+        self.view.endEditing(true)
     }
     
 }
